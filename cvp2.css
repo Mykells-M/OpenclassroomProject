@@ -1,0 +1,179 @@
+html /* page principale */
+{
+    height: 100%;
+}
+
+body
+{
+    height: 100%;
+}
+
+#main
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+    font-family: 'HelveticaNeue';
+    height: 100%;
+}
+
+#column /* colonne gauche */
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 384px;
+    background-color: #008b8b;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-right: 6em;
+}
+
+#photo /* taille et position photo */
+{
+    width: 216px;
+    height: 216px;
+    border-radius: 50%;
+    background-image: url(michael_mini.jpg);
+    margin-top: 60px;
+    background-position: center;
+}
+
+.top /* barre titre des éléments internes à la colonne */
+{
+    width: 384px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #000000;
+    color: #008b8b;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+/* mis en forme contenu colonne */
+#contact p
+{
+    margin-left: 50px;
+    text-align: left;
+}
+
+a
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+#about p
+{
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+#hobby p
+{
+    display: inline-block;
+    font-size: 3em;
+    justify-content: space-around;
+    margin: 0 20px 0 20px;
+}
+/* Nom et Fonction */
+h1 /* identité bicolore */
+{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.color1
+{
+    color: #008b8b;
+}
+
+#name h2 /* Profession et soulignement partiel */
+{
+    margin-top: -20px;
+}
+
+.under
+{
+    text-decoration: underline #008b8b;
+    text-underline-position: under;
+}
+/* Mise en forme titre icônes+catégories */
+#experience h2 /* titres catégories */
+{
+    width: 80%;
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #008b8b;
+    padding-bottom: 10px;
+}
+
+#experience i /* icônes */
+{
+    color: #008b8b;
+    margin-right: 10px;
+}
+
+/* mise en forme Formation et Pro */
+.first
+{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.second
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 20%;
+
+}
+
+.third
+{
+    border: 2px solid #008b8b;
+    border-radius: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    margin-right: 1em;
+}
+
+.dot
+{
+    display: list-item;
+    list-style: disc inside;
+    color: #008b8b;
+}
+
+.job
+{
+    width: 30%;
+}
+
+.title
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Recommandations */
+
+#last
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.more
+{
+    width: 20%;
+}
