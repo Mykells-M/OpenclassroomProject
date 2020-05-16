@@ -1,21 +1,16 @@
-html /* page principale */
+html, body /* page principale */
 {
     height: 100%;
-}
-
-body
-{
-    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #main
 {
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-evenly;
-    align-content: stretch;
     font-family: 'HelveticaNeue';
-    height: 100%;
+    height: 100vh;
 }
 
 #column /* colonne gauche */
@@ -25,10 +20,9 @@ body
     height: 100%;
     width: 384px;
     background-color: #008b8b;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-right: 6em;
 }
 
 #photo /* taille et position photo */
@@ -38,6 +32,7 @@ body
     height: 250px;
     border-radius: 50%;
     background-position: center;
+    margin-top: 3em;
 }
 
 .top /* barre titre des éléments internes à la colonne */
@@ -46,7 +41,7 @@ body
     line-height: 48px;
     background-color: #000000;
     color: #008b8b;
-    font-size: 30px;
+    font-size: 2em;
     text-transform: uppercase;
 }
 
@@ -69,7 +64,10 @@ a
     margin-right: 50px;
     text-align: justify;
 }
-
+#hobby
+{
+    margin-bottom: 2em;
+}
 #hobby p
 {
     display: inline-block;
@@ -80,13 +78,18 @@ a
 /* Nom et Fonction */
 h1 /* identité bicolore */
 {
-    font-size: 50px;
+    font-size: 3.2em;
     text-transform: uppercase;
 }
 
 .color1
 {
     color: #008b8b;
+}
+
+#name, #experience
+{
+    margin-left: 5%;
 }
 
 #name h2 /* Profession et soulignement partiel */
@@ -100,19 +103,20 @@ h1 /* identité bicolore */
     text-underline-position: under;
 }
 /* Mise en forme titre icônes+catégories */
+
 #experience h2 /* titres catégories */
 {
-    width: 80%;
-    font-size: 30px;
+    width: 85%;
+    font-size: 1.8em;
     text-transform: uppercase;
     border-bottom: 2px solid #008b8b;
-    padding-bottom: 10px;
+    padding-bottom: 1%;
 }
 
 #experience i /* icônes */
 {
     color: #008b8b;
-    margin-right: 10px;
+    margin-right: 2%;
 }
 
 /* mise en forme Formation et Pro */
@@ -129,7 +133,7 @@ h1 /* identité bicolore */
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    width: 20%;
+    width: 15%;
 
 }
 
@@ -164,7 +168,7 @@ h1 /* identité bicolore */
 
 .job
 {
-    width: 30%;
+    width: 50%;
 }
 
 .title
@@ -179,19 +183,39 @@ h1 /* identité bicolore */
 #last
 {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     width: 100%;
 }
 
 .more
 {
-    width: 20%;
+    width: 30%;
 }
 /* paramètres responsive en fonction de la largeur d'écran */
-@media only screen and (max-width: 600px)
+@media screen and (max-width: 600px)
 {
-    
+    #main
+    {
+        height: 100%;
+        overflow: auto;
+    }
+    #main, #experience, .first
+    {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    #name
+    {
+        order: -1;
+    }
+    #name, #experience
+    {
+        margin-left: 0;
+        width: 80%;
+    }
+    .first, .second, .job, #experience h2
+    {
+        width: 90%;
+    }
 }
 @media only screen and (min-width: 600px)
 {}
