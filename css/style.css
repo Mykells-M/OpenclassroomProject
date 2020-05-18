@@ -1,6 +1,6 @@
 html, body /* page principale */
 {
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,7 @@ html, body /* page principale */
 {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: auto;
     width: 384px;
     background-color: #008b8b;
     justify-content: space-between;
@@ -25,14 +25,12 @@ html, body /* page principale */
     text-align: center;
 }
 
-#photo /* taille et position photo */
+#column #photo>img /* taille et position photo */
 {
-    background: url(../image/michael_mini.jpg);
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    border: .1rem solid #000000;
     border-radius: 50%;
-    background-position: center;
-    margin-top: 3em;
+    margin-top: 1rem;
 }
 
 .top /* barre titre des éléments internes à la colonne */
@@ -196,12 +194,16 @@ h1 /* identité bicolore */
     #main
     {
         height: 100%;
-        overflow: auto;
+        width: 100%;
     }
     #main, #experience, .first
     {
         flex-flow: column nowrap;
         align-items: center;
+    }
+    #column, .top
+    {
+        width: 100%;
     }
     #name
     {
@@ -214,7 +216,7 @@ h1 /* identité bicolore */
     }
     .first, .second, .job, #experience h2
     {
-        width: 90%;
+        width: 85%;
     }
 }
 @media only screen and (min-width: 600px)
